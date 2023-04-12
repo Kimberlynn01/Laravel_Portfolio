@@ -11,13 +11,23 @@
 }
 
 @font-face {
+    font-family: 'ReemSemi';
+    src: url(/font/Reem_Kufi/static/ReemKufi-SemiBold.ttf);
+}
+
+@font-face {
     font-family: 'RubikGlitch';
     src: url(/font/Rubik_Glitch/RubikGlitch-Regular.ttf);
 }
 
+@font-face {
+    font-family: 'Roboto';
+    src: url(/font/Roboto/Roboto-Regular.ttf);
+}
+
 .container-navbar {
     width: 100%;
-    background-color: rgba(153, 34, 172, 88%);
+    background-color: rgba(88, 195, 183, 88%);
 }
 
 nav {
@@ -113,7 +123,7 @@ nav ul li a {
 .content-dropdown {
     display: none;
     position: absolute;
-    background-color: rgba(153, 34, 172, 95%);
+    background-color: rgba(88, 195, 183, 95%);
     transform: translateY(-17px);
     width: 80px;
     border-radius: 5px;
@@ -132,22 +142,53 @@ nav ul li a {
 /* End Navbar */
 
 /* Start Content */
-.body-content{
+
+.body-content {
     width: 100%;
+    z-index: -2;
 }
 
 .body-content .title-content {
-    font-family: 'RubikGlitch';
+    font-family: 'ReemSemi';
+    position: absolute;
+    top: 280px;
+    left: 3%;
+    padding-left: 20px;
+}
+.body-content .title-content:nth-child(4) {
+    font-family: 'ReemSemi';
+    position: absolute;
+    top: 280px;
+    left: 6.5%;
+    padding-left: 20px;
+}
+
+.body-content .title-content:nth-child(4) label {
+    color: #58C3B7;
+}
+
+.body-content .text-content {
+    font-family: 'ReemSemi';
+    position: absolute;
+    font-size: 20px;
+    top: 340px;
+    left: 3%;
+    padding-left: 20px;
+}
+
+.body-content .hi-content {
     position: absolute;
     top: 250px;
     padding-left: 20px;
 }
 
-.body-content .text-content {
-    font-family: 'Reem';
+.body-content .hello-content {
     position: absolute;
-    top: 320px;
+    top: 235px;
+    left: 3%;
     padding-left: 20px;
+    font-family: 'ReemSemi';
+    font-size: 25px;
 }
 
 .body-content .hire-content {
@@ -155,10 +196,11 @@ nav ul li a {
     height: 40px;
     border-radius: 5px;
     border: none;
-    background-color: rgba(153, 34, 172, 88%);
+    background-color: rgba(88, 195, 183, 88%);
     position: absolute;
-    top: 400px;
-    left: 2%;
+    top: 430px;
+    left: 4.3%;
+    font-family: 'ReemSemi';
 }
 
 .body-content .cv-content {
@@ -166,16 +208,16 @@ nav ul li a {
     height: 40px;
     border-radius: 5px;
     border: none;
-    background-color: rgba(153, 34, 172, 88%);
+    background-color: rgba(88, 195, 183, 88%);
     position: absolute;
-    top: 400px;
-    left: 10%;
+    top: 430px;
+    left: 11.5%;
+    font-family: 'ReemSemi';
 }
 
 .body-img {
     position: absolute;
     top: 170px;
-
 }
 
 .box-search {
@@ -211,6 +253,7 @@ input[type='search'] {
     margin-left: 10px;
     transition: color 2s;
     border: 1px solid rgba(0, 0, 0, 0.836);
+    cursor: pointer;
 }
 
 .box-search:hover input {
@@ -232,8 +275,8 @@ input[type='search'] {
     .container-navbar {
         display: block;
         width: 100%;
-        background-color: rgba(153, 34, 172, 100%);
-        border-bottom: #000000 solid 2px;
+        background-color: rgba(88, 195, 183, 100%);
+        border-bottom: #000000 solid 1px;
     }
 
     nav {
@@ -246,7 +289,7 @@ input[type='search'] {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        background-color: rgba(153, 34, 172, 88%);
+        background-color: rgb(88, 195, 183);
         width: auto;
         margin: 0%;
         position: fixed;
@@ -256,7 +299,6 @@ input[type='search'] {
         top: -100%;
         padding-top: 20px;
         transition: top 1s;
-        
     }
 
     .top {
@@ -317,8 +359,8 @@ input[type='search'] {
         top: 0;
         text-align: center;
         margin-top: 30px;
-        background-color: rgba(153, 34, 172, 95%);
-        z-index: 3;
+        background-color: rgba(88, 195, 183, 100%);
+        z-index: 1;
         transform: translateY(0px) translateX(50%);       
     }
 
@@ -329,7 +371,8 @@ input[type='search'] {
         justify-content: space-between;
         position: fixed;
         left: 6% auto;
-        top: 3%;
+        top: 4.5%;
+        z-index: 10;
     }
 
     .menu input {
@@ -380,38 +423,45 @@ input[type='search'] {
         position: absolute;
         top: 85%;
         left: 40%;
+        /* z-index: 1; */
     }
 
     .search-i {
         position: relative;
-        transform: translate(45px);
+        transform: translate(20px);
         transition: all 2s;
     }
 
     .box-search:hover .search-i {
         position: relative;
-        transform: translate(0px);
+        transform: translate(-30px);
+    }
+
+    .box-search:hover input[type='search'] {
+        transform: translate(-30px);
     }
 
 
     /* End Navbar */
 
     /* Start Main Content */
-    .body-content .title-content {
+    /* .body-content .title-content {
         padding-left: 0;
     }
 
     .body-content .text-content {
         padding-left: 0;
         top: 300px;
-    }
+    } */
+
+
 
     .body-content .hire-content {
         width: 90px;
         height: 40px;
         border-radius: 5px;
         border: none;
-        background-color: rgba(153, 34, 172, 88%);
+        background-color: rgba(88, 195, 183, 88%);
         position: absolute;
         top: 390px;
         left: 2%;
@@ -422,10 +472,11 @@ input[type='search'] {
         height: 40px;
         border-radius: 5px;
         border: none;
-        background-color: rgba(153, 34, 172, 88%);
+        background-color: rgba(88, 195, 183, 88%);
         position: absolute;
         top: 390px;
         left: 32%;
+        z-index: -1;
     }
 
     .body-img {
